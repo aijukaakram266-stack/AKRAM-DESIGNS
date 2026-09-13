@@ -8,12 +8,9 @@
     <meta name="keywords" content="graphic design, video production, branding, photography, media design, professional design services">
     <meta property="og:title" content="AKRAM DESIGNS - Professional Media Design Services">
     <meta property="og:description" content="Transform your vision into stunning visual reality. 500+ completed projects. Get your brand elevated today!">
-    <meta property="og:image" content="https://aijukaakram266-stack.github.io/AKRAM-DESIGNS/og-image.png">
     <meta property="og:url" content="https://aijukaakram266-stack.github.io/AKRAM-DESIGNS/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AKRAM DESIGNS - Professional Media Design Services">
-    <meta name="twitter:description" content="Transform your vision into stunning visual reality. 500+ completed projects">
     <link rel="canonical" href="https://aijukaakram266-stack.github.io/AKRAM-DESIGNS/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -31,6 +28,7 @@
             --accent-gold: #ffd700;
             --accent-purple: #7c3aed;
             --accent-pink: #ff006e;
+            --success-green: #10b981;
             --light-bg: #f0f4f8;
             --dark-bg: #0f1419;
             --text-color: #1a3a52;
@@ -131,7 +129,6 @@
         .share-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
-            background: linear-gradient(135deg, #ffb700, #ffa500);
         }
 
         /* Hero Section */
@@ -184,7 +181,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
         }
 
         .hero p {
@@ -243,13 +239,11 @@
         .cta-button.secondary {
             background: transparent;
             border: 2px solid var(--secondary-bright);
-            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
         }
 
         .cta-button.secondary:hover {
             background: var(--secondary-bright);
             color: var(--primary-dark);
-            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
         }
 
         /* Testimonials Section */
@@ -488,6 +482,128 @@
             font-size: 0.95rem;
         }
 
+        .service-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-bright);
+            margin-top: 1rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, #ffffff 0%, #f0f4f8 100%);
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing h2 {
+            margin-bottom: 3rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--secondary-bright);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 212, 255, 0.2);
+            border-color: var(--accent-gold);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            background: var(--gradient-vibrant);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--secondary-bright), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            min-height: 60px;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        .pricing-features li {
+            list-style: none;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+            font-weight: 700;
+        }
+
+        .pricing-cta {
+            background: var(--gradient-vibrant);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+        }
+
         /* Portfolio Section */
         .portfolio {
             padding: 5rem 2rem;
@@ -550,6 +666,67 @@
         .portfolio-item span {
             position: relative;
             z-index: 2;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            padding: 4rem 2rem;
+            background: var(--gradient-vibrant);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .newsletter-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .newsletter-input:focus {
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+        }
+
+        .newsletter-btn {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .newsletter-btn:hover {
+            background: #ffb700;
+            transform: translateY(-3px);
         }
 
         /* CTA Section */
@@ -662,7 +839,6 @@
             background: var(--secondary-bright);
             color: var(--primary-dark);
             transform: translateY(-8px) scale(1.15);
-            border-color: var(--accent-gold);
         }
 
         .contact-form {
@@ -688,7 +864,6 @@
             outline: none;
             background: var(--white);
             box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.3);
-            transform: scale(1.02);
         }
 
         .contact-form textarea {
@@ -737,14 +912,10 @@
             }
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
         .service-card,
         .portfolio-item,
-        .testimonial-card {
+        .testimonial-card,
+        .pricing-card {
             animation: fadeInUp 0.6s ease forwards;
         }
 
@@ -754,10 +925,6 @@
         .service-card:nth-child(4) { animation-delay: 0.4s; }
         .service-card:nth-child(5) { animation-delay: 0.5s; }
         .service-card:nth-child(6) { animation-delay: 0.6s; }
-
-        .pulse-badge {
-            animation: pulse 2s infinite;
-        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -770,17 +937,12 @@
                 font-size: 2.2rem;
             }
 
-            .hero p {
-                font-size: 1rem;
-            }
-
             .cta-buttons {
                 flex-direction: column;
             }
 
             .cta-button {
                 width: 100%;
-                border-radius: 15px;
             }
 
             .nav-links {
@@ -792,18 +954,24 @@
                 font-size: 2rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
+            .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
             }
 
             .services-grid,
             .portfolio-grid,
-            .testimonials-grid {
+            .testimonials-grid,
+            .pricing-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .newsletter-form {
+                flex-direction: column;
             }
         }
     </style>
@@ -814,8 +982,8 @@
         <div class="logo"><i class="fas fa-palette"></i>AKRAM DESIGNS</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -829,8 +997,8 @@
             <h1>Elevate Your Brand with <span class="highlight">Professional Design</span></h1>
             <p>We create stunning visual experiences that captivate, engage, and inspire your audience. Join 150+ happy clients who transformed their brands!</p>
             <div class="cta-buttons">
-                <a href="#contact" class="cta-button">🚀 Get Started Now</a>
-                <a href="#portfolio" class="cta-button secondary">👀 View Our Work</a>
+                <a href="#contact" class="cta-button">🚀 Book Free Consultation</a>
+                <a href="#pricing" class="cta-button secondary">💎 View Packages</a>
             </div>
         </div>
     </section>
@@ -842,55 +1010,18 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"AKRAM DESIGNS transformed our brand completely! The attention to detail and creativity is unmatched. Highly recommended!"</p>
-                    <p class="testimonial-author">- Sarah Johnson, CEO</p>
+                    <p class="testimonial-text">"AKRAM DESIGNS transformed our brand! Sales increased 150% after the redesign. Best investment ever!"</p>
+                    <p class="testimonial-author">- Sarah Johnson, CEO (Earned $50K+ ROI)</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Best investment we made! Our sales increased 150% after the redesign. The team is professional and responsive."</p>
+                    <p class="testimonial-text">"Professional, responsive, and delivered beyond expectations. They understood our vision perfectly!"</p>
                     <p class="testimonial-author">- Michael Chen, Founder</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Incredible work! They delivered exactly what we needed and exceeded our expectations. Five stars all the way!"</p>
+                    <p class="testimonial-text">"Worth every penny! Our brand now stands out. The team is incredibly talented and easy to work with."</p>
                     <p class="testimonial-author">- Emma Davis, Marketing Director</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <h2 class="section-title">About AKRAM DESIGNS</h2>
-        <div class="about-content">
-            <div>
-                <p>
-                    AKRAM DESIGNS is a leading creative studio specializing in professional media design services. 
-                    With over a decade of industry expertise, we partner with businesses and entrepreneurs to transform 
-                    their creative visions into compelling visual realities.
-                </p>
-                <p>
-                    Our team of talented designers, videographers, and strategists are dedicated to delivering 
-                    high-quality, innovative solutions that drive results and elevate your brand presence in 
-                    today's competitive market.
-                </p>
-            </div>
-            <div class="about-stats">
-                <div class="stat">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">150+</div>
-                    <div class="stat-label">Happy Clients</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Expert Team Members</div>
                 </div>
             </div>
         </div>
@@ -899,37 +1030,95 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="services-container">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title">Our Premium Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-video"></i></div>
                     <h3>Video Production</h3>
-                    <p>Professional video creation, editing, and post-production services tailored to your project requirements</p>
+                    <p>Professional video creation, editing, and post-production tailored to your brand</p>
+                    <div class="service-price">From $500</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
                     <h3>Graphic Design</h3>
-                    <p>Custom graphics, logos, and visual branding solutions that reflect your unique brand identity</p>
+                    <p>Custom graphics, logos, and visual branding solutions for your unique identity</p>
+                    <div class="service-price">From $300</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-camera"></i></div>
                     <h3>Photography</h3>
-                    <p>High-quality commercial, product, and lifestyle photography with professional retouching</p>
+                    <p>High-quality commercial and product photography with professional retouching</p>
+                    <div class="service-price">From $400</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-paintbrush"></i></div>
                     <h3>Illustration & Animation</h3>
                     <p>Custom illustrations, character design, and motion graphics for digital platforms</p>
+                    <div class="service-price">From $600</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-rocket"></i></div>
                     <h3>Brand Development</h3>
-                    <p>Complete branding solutions from strategy to implementation of comprehensive brand guidelines</p>
+                    <p>Complete branding solutions from strategy to implementation of brand guidelines</p>
+                    <div class="service-price">From $1,500</div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Digital Content</h3>
-                    <p>Social media content, web animations, and digital assets designed for modern platforms</p>
+                    <p>Social media content, web animations, and digital assets for modern platforms</p>
+                    <div class="service-price">From $250</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <h2 class="section-title">Flexible Pricing Plans</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <span class="pricing-badge">Starter</span>
+                    <h3>Basic Package</h3>
+                    <div class="pricing-price">$500</div>
+                    <p class="pricing-description">Perfect for small projects and freelancers</p>
+                    <ul class="pricing-features">
+                        <li>2-3 Design Concepts</li>
+                        <li>2 Revisions</li>
+                        <li>Delivery in 5 days</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <button class="pricing-cta" onclick="contactUs('Basic Package')">Get Started</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Most Popular 🌟</span>
+                    <h3>Professional Package</h3>
+                    <div class="pricing-price">$1,500</div>
+                    <p class="pricing-description">Ideal for businesses and brands</p>
+                    <ul class="pricing-features">
+                        <li>5-7 Design Concepts</li>
+                        <li>Unlimited Revisions</li>
+                        <li>Delivery in 10 days</li>
+                        <li>WhatsApp Support</li>
+                        <li>Brand Strategy Included</li>
+                    </ul>
+                    <button class="pricing-cta" onclick="contactUs('Professional Package')">Book Now</button>
+                </div>
+
+                <div class="pricing-card">
+                    <span class="pricing-badge">Premium</span>
+                    <h3>Premium Package</h3>
+                    <div class="pricing-price">$3,000+</div>
+                    <p class="pricing-description">Full brand transformation</p>
+                    <ul class="pricing-features">
+                        <li>Complete Branding Suite</li>
+                        <li>Unlimited Revisions</li>
+                        <li>Priority Support</li>
+                        <li>Video/Animation Included</li>
+                        <li>Custom Solutions</li>
+                    </ul>
+                    <button class="pricing-cta" onclick="contactUs('Premium Package')">Inquire Now</button>
                 </div>
             </div>
         </div>
@@ -962,17 +1151,29 @@
         </div>
     </section>
 
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>📧 Get Weekly Design Tips & Updates</h2>
+            <p>Subscribe to receive exclusive insights, industry trends, and special offers!</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                <button type="submit" class="newsletter-btn">Subscribe Now</button>
+            </form>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
-        <h2>Ready to Transform Your Brand? 🚀</h2>
-        <p>Join 150+ successful businesses that have elevated their brand with AKRAM DESIGNS</p>
-        <a href="#contact" class="cta-button">Start Your Project Today</a>
+        <h2>Limited Time Offer! 🎯</h2>
+        <p>Book a FREE consultation today and get 20% off your first project!</p>
+        <a href="#contact" class="cta-button">Claim Your Free Consultation</a>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact-container">
-            <h2 class="section-title" style="color: white;">Get In Touch</h2>
+            <h2 class="section-title" style="color: white;">Ready to Get Started? 🚀</h2>
             <div class="contact-content">
                 <div class="contact-info-section">
                     <div class="contact-info-item">
@@ -1018,7 +1219,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 AKRAM DESIGNS. All Rights Reserved.</p>
-        <p>Professional Media Design Solutions | Elevating Brands Globally</p>
+        <p>Professional Media Design Solutions | Elevating Brands Globally | Making You Money 💰</p>
         <p style="margin-top: 1rem; font-size: 0.85rem;">Follow us and share this amazing design studio with your network! 🌟</p>
     </footer>
 
@@ -1045,20 +1246,35 @@
             const form = event.target;
             const name = form.querySelector('input[type="text"]').value;
             const email = form.querySelector('input[type="email"]').value;
+            const project = form.querySelectorAll('input[type="text"]')[1].value;
             
             // Send to WhatsApp
-            const message = `Hi! I'm ${name}. My email is ${email}. I'd like to discuss a project with AKRAM DESIGNS.`;
+            const message = `Hi AKRAM DESIGNS! 👋\n\nI'm ${name}.\nEmail: ${email}\nProject: ${project}\n\nI'd like to discuss this project with you!`;
             window.open(`https://wa.me/256789438039?text=${encodeURIComponent(message)}`, '_blank');
             
-            alert(`Thank you, ${name}! We've received your inquiry and will contact you soon via WhatsApp or email.`);
+            alert(`Thank you, ${name}! We've received your inquiry. Redirecting you to WhatsApp now! 💬`);
             form.reset();
+        }
+
+        // Contact function for pricing
+        function contactUs(package) {
+            const message = `Hi! I'm interested in your ${package}. Can you provide more details?`;
+            window.open(`https://wa.me/256789438039?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Newsletter subscription
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            alert(`✅ Thanks for subscribing! Check your email (${email}) for exclusive tips and offers!`);
+            event.target.reset();
         }
 
         // Share functionality
         function shareWebsite() {
             const title = "AKRAM DESIGNS - Professional Media Design Services";
             const url = "https://aijukaakram266-stack.github.io/AKRAM-DESIGNS/";
-            const text = "Check out AKRAM DESIGNS! 500+ completed projects, 150+ happy clients. Transform your brand with professional design services! 🎨";
+            const text = "Transform your brand with AKRAM DESIGNS! 500+ projects, 150+ happy clients. Professional design that PAYS! 🎨💰";
 
             if (navigator.share) {
                 navigator.share({
@@ -1067,16 +1283,14 @@
                     url: url
                 }).catch(err => console.log('Error sharing:', err));
             } else {
-                // Fallback - copy to clipboard
                 const fullText = `${text}\n${url}`;
                 navigator.clipboard.writeText(fullText).then(() => {
-                    alert('Share link copied to clipboard! 📋');
+                    alert('Share link copied! 📋');
                 });
             }
         }
 
-        // Track page views for social proof
-        console.log('Welcome to AKRAM DESIGNS! 🎨');
+        console.log('Welcome to AKRAM DESIGNS - Your Money-Making Design Studio! 🎨💰');
     </script>
 </body>
 </html>
